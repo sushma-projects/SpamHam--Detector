@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background-image: url('static/download.png');">
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<center><h2>Machine Learning App with Flask</h2></center>
+		</div>
+		<center><h1>Spam or Ham Detector For SMS Messages</h1></center>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<center>
+		<p><h3>Enter Your Message Here</h3></p>
+		<textarea name="message" rows="4" cols="50" required></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict">
+		</center>	
+		
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
